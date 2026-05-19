@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="output" type="number" min="100" max="300">
+    <button onclick="dothis()">SUBMIT</button>
+    <p id="result"></p>
+
+    <script>
+        function dothis() {
+            var y = document.getElementById("output");
+            if (!y.checkValidity()) {
+                document.getElementById("result").innerHTML = y.validityMessage;
+            }
+
+            else {
+                document.getElementById("result").innerHTML = "Input is valid";
+            }
+        }
+    </script>
+</body>
+</html>
